@@ -1,7 +1,7 @@
 // src/App.tsx
 import React from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import { Container, Grid} from "@mui/material";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Container, Grid } from "@mui/material";
 import LoginPage from "./components/features/auth/LoginPage";
 import RegisterPage from "./components/features/auth/RegisterPage";
 import CategoryPage from "./components/features/category/CategoryPage";
@@ -26,7 +26,7 @@ function App() {
               <Route path="/category" element={<CategoryPage />} />
               <Route path="/category/create" element={<CategoryCreatePage />} />
               <Route
-                path="/category/edit/:categoryId"
+                path="/category/edit/:id"
                 element={<CategoryUpdatePage />}
               />
             </Routes>

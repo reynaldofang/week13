@@ -1,5 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Vqy8tqrT)
-# Week 12 FrontEnd Implementation React - Full-Stack Engineering
+# Week 12 Advanced Frontend - Full-Stack Engineering
 
 If you want to follow me on social media, you can directly click the link below.
 
@@ -10,9 +9,16 @@ If you want to follow me on social media, you can directly click the link below.
 
 If you want try my project i arleady deploy in below:
 
-[Week 12 Project](https://reynaldofang-week12.netlify.app/)
+[Week 13 Project](https://reynaldofang-week13.netlify.app/)
 
+Kalau mau pakai Email Dummy aku bisa ya pakai ini
 
+kalau engga register juga boleh
+```
+Email : reynaldodummy@gmail.com
+Password : ayam123@
+
+```
 That all!!
 
 I hope the steps I explained above are clear to you.
