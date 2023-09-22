@@ -19,7 +19,7 @@ interface Category {
   is_active: boolean;
 }
 
-const MyTable: React.FC = () => {
+const CategoryPage: React.FC = () => {
   const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const token =
@@ -46,11 +46,31 @@ const MyTable: React.FC = () => {
   }, [token]);
 
   const handleEdit = (id: string) => {
+    navigate(`/category/edit/${id}`);
     console.log("Edit category with ID:", id);
   };
 
-  const handleDelete = (id: string) => {
-    console.log("Delete category with ID:", id);
+  const handleDelete = async (id: string) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this category?"
+    );
+
+    if (confirmDelete) {
+      try {
+        await axios.delete(`https://mock-api.arikmpt.com/api/category/${id}`, {
+          headers: {
+            Authorization: token,
+          },
+        });
+        setCategories((prevCategories) =>
+          prevCategories.filter((category) => category.id !== id)
+        );
+
+        console.log(`Deleted category with ID: ${id}`);
+      } catch (error) {
+        console.error(`Failed to delete category with ID ${id}:`, error);
+      }
+    }
   };
 
   const handleAddNewCategory = () => {
@@ -81,7 +101,7 @@ const MyTable: React.FC = () => {
               <TableRow key={category.id}>
                 <TableCell>{category.id}</TableCell>
                 <TableCell>{category.name}</TableCell>
-                <TableCell>{category.is_active ? "Yes" : "No"}</TableCell>
+                <TableCell>{category.is_active ? "Active" : "Deactive"}</TableCell>
                 <TableCell>
                   <Button
                     variant="outlined"
@@ -107,4 +127,4 @@ const MyTable: React.FC = () => {
   );
 };
 
-export default MyTable;
+export default CategoryPage;
