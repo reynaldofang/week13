@@ -33,14 +33,14 @@ const LoginPage: React.FC = () => {
 
       console.log("Login successful:", response.data);
 
-      navigate("/dashboard");
+      navigate("/category");
     } catch (error) {
       console.error("Login failed:", error);
     }
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="sm" style={{ marginTop: "2rem" }}>
       <Typography variant="h4" gutterBottom>
         Login
       </Typography>
@@ -75,13 +75,18 @@ const LoginPage: React.FC = () => {
           <ErrorMessage name="password">
             {(message) => <div className="error-message">{message}</div>}
           </ErrorMessage>
-          <Button type="submit" variant="contained" color="primary" fullWidth>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            fullWidth
+            style={{ marginTop: "1rem" }}
+          >
             Login
           </Button>
         </Form>
       </Formik>
-      {/* Tambahkan teks dan tautan untuk pendaftaran */}
-      <Typography variant="body2" align="center" style={{ marginTop: "16px" }}>
+      <Typography variant="body2" align="center" style={{ marginTop: "1rem" }}>
         Belum ada akun?{" "}
         <MuiLink component={Link} to="/register" color="primary">
           Register disini

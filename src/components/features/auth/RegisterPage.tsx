@@ -94,7 +94,7 @@ const RegistrationPage: React.FC = () => {
       {/* Tambahkan teks dan tautan untuk login */}
       <Typography variant="body2" align="center" style={{ marginTop: "16px" }}>
         Sudah pernah register?{" "}
-        <MuiLink component={Link} to="/login" color="primary">
+        <MuiLink component={Link} to="/" color="primary">
           Login disini
         </MuiLink>
       </Typography>
